@@ -1,9 +1,9 @@
-package me.emmy.sential.api.command;
+package me.emmy.sential.util.command;
 
 import me.emmy.sential.Sential;
 import me.emmy.sential.util.CC;
-import me.emmy.sential.api.command.annotation.Command;
-import me.emmy.sential.api.command.annotation.Completer;
+import me.emmy.sential.util.command.annotation.Command;
+import me.emmy.sential.util.command.annotation.Completer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandExecutor;
@@ -16,13 +16,7 @@ import org.bukkit.help.HelpTopic;
 import org.bukkit.help.HelpTopicComparator;
 import org.bukkit.help.IndexHelpTopic;
 import org.bukkit.plugin.SimplePluginManager;
-import org.reflections.Reflections;
-import org.reflections.scanners.SubTypesScanner;
-import org.reflections.util.ClasspathHelper;
-import org.reflections.util.ConfigurationBuilder;
-import org.reflections.util.FilterBuilder;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

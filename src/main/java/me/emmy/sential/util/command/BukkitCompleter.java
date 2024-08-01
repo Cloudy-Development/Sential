@@ -1,4 +1,4 @@
-package me.emmy.sential.api.command;
+package me.emmy.sential.util.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

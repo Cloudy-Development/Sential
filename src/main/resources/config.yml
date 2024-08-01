@@ -1,0 +1,10 @@
+alert-format:
+  - ""
+  - "&7[&4Alert&7] &r{msg}"
+  - ""
+
+help:
+  - "&e&lHelp"
+  - "configure this in the config"
+  - "or just dont touch it, idc"
+  - "bla bla bla"

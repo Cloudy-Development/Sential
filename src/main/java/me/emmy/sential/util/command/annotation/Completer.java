@@ -1,4 +1,4 @@
-package me.emmy.sential.api.command.annotation;
+package me.emmy.sential.util.command.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

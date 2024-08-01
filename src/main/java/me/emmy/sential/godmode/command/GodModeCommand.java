@@ -1,9 +1,9 @@
 package me.emmy.sential.godmode.command;
 
 import me.emmy.sential.Sential;
-import me.emmy.sential.api.command.BaseCommand;
-import me.emmy.sential.api.command.CommandArgs;
-import me.emmy.sential.api.command.annotation.Command;
+import me.emmy.sential.util.command.BaseCommand;
+import me.emmy.sential.util.command.CommandArgs;
+import me.emmy.sential.util.command.annotation.Command;
 import me.emmy.sential.godmode.GodModeRepository;
 import me.emmy.sential.util.CC;
 import org.bukkit.entity.Player;

@@ -1,7 +1,7 @@
 package me.emmy.sential.command;
 
-import me.emmy.sential.api.command.CommandArgs;
-import me.emmy.sential.api.command.annotation.Command;
+import me.emmy.sential.util.command.CommandArgs;
+import me.emmy.sential.util.command.annotation.Command;
 import me.emmy.sential.util.CC;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
