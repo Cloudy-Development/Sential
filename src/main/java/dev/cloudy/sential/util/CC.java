@@ -28,6 +28,16 @@ public class CC {
     }
 
     /**
+     * unTranslate a string with color codes
+     *
+     * @param text The text to unTranslate
+     * @return The unTranslated text
+     */
+    public String unTranslate(String text) {
+        return ChatColor.stripColor(text);
+    }
+
+    /**
      * Send a message to the console when the locale is enabled
      */
     public void sendEnableMessage() {

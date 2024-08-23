@@ -1,6 +1,9 @@
 package dev.cloudy.sential;
 
 import dev.cloudy.sential.api.command.CommandFramework;
+import dev.cloudy.sential.feature.chat.ChatRepository;
+import dev.cloudy.sential.feature.chat.command.ChatCommand;
+import dev.cloudy.sential.feature.chat.format.listener.ChatListener;
 import dev.cloudy.sential.player.command.SentialCommand;
 import dev.cloudy.sential.player.command.admin.AlertCommand;
 import dev.cloudy.sential.player.command.admin.GamemodeCommand;
@@ -31,6 +34,7 @@ public class Sential extends JavaPlugin {
     private GodModeRepository godModeRepository;
     private AnnouncementTask announcementTask;
     private PermissionRepository permissionRepository;
+    private ChatRepository chatRepository;
 
     @Override
     public void onEnable() {
@@ -59,6 +63,7 @@ public class Sential extends JavaPlugin {
         godModeRepository = new GodModeRepository();
         permissionRepository = new PermissionRepository();
         permissionRepository.loadPermissions();
+        chatRepository = new ChatRepository(false);
     }
 
     private void registerCommands() {
@@ -69,14 +74,16 @@ public class Sential extends JavaPlugin {
                 new HealCommand(),
                 new AlertCommand(),
                 new HelpCommand(),
-                new PermissionCommand()
+                new PermissionCommand(),
+                new ChatCommand()
         ).forEach(commandFramework::registerCommands);
     }
 
     private void registerListeners() {
         List<Listener> listeners = Arrays.asList(
                 new JoinListener(),
-                new GodModeListener()
+                new GodModeListener(),
+                new ChatListener()
         );
         listeners.forEach(listener -> getServer().getPluginManager().registerEvents(listener, this));
     }

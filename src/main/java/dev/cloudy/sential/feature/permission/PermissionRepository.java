@@ -20,7 +20,7 @@ import java.util.*;
 public class PermissionRepository {
 
     private final Map<String, Set<String>> playerPermissions = new HashMap<>();
-    private final Sential plugin = Sential.getInstance(); // Use the locale instance directly
+    private final Sential plugin = Sential.getInstance();
 
     /**
      * Adds a permission to a player and saves it.
@@ -51,6 +51,7 @@ public class PermissionRepository {
 
     /**
      * Gets the list of permissions of an offline player.
+     * Only if it exists in the config file.
      *
      * @param player the offline player to get the permissions of
      * @return the list of permissions
@@ -91,6 +92,7 @@ public class PermissionRepository {
 
     /**
      * Checks if a player has a specific permission.
+     * If the player has the permission, it returns true, otherwise false.
      *
      * @param playerName the player to check
      * @param permission the permission to check

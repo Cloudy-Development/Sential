@@ -2,10 +2,16 @@
 #---------------------------------------------------------
 #                       General Settings
 #---------------------------------------------------------
+chat:
+  format:
+    enabled: true
+    format: "&7{player} &8» &f{message}"
+#alert command format
 alert-format:
   - ""
   - "&7[&4Alert&7] &r{msg}"
   - ""
+#help command format
 help:
   - "&e&lHelp"
   - "&7To do bla bla bla, type: &b/bla bla bla"
