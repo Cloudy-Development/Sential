@@ -1,6 +1,7 @@
 package dev.cloudy.sential.feature.chat.format;
 
 import dev.cloudy.sential.Sential;
+import dev.cloudy.sential.util.CC;
 import lombok.experimental.UtilityClass;
 import org.bukkit.entity.Player;
 
@@ -23,8 +24,10 @@ public class ChatFormat {
      * @return the chat format
      */
     public String getFormat(Player player, String message) {
+        String opColor = Sential.getInstance().getConfig().getString("chat.format.op-prefix");
+        String isOp = player.isOp() ? opColor : "";
         return Sential.getInstance().getConfig().getString("chat.format.format")
-                .replace("{player}", player.getName())
+                .replace("{player}", isOp + player.getName())
                 .replace("{message}", message);
     }
 }

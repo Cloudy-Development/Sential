@@ -5,6 +5,7 @@
 chat:
   format:
     enabled: true
+    op-prefix: "&4&l[OP] &c"
     format: "&7{player} &8» &f{message}"
 #alert command format
 alert-format:
