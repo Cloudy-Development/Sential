@@ -23,8 +23,8 @@ public class SentialCommand extends BaseCommand {
         sender.sendMessage(CC.translate(" &f* &7Author: &c" + ProjectInfo.AUTHOR));
         sender.sendMessage(CC.translate(" &f* &7Version: &c" + ProjectInfo.VERSION));
         sender.sendMessage(CC.translate(" &f* &7Discord: &c" + ProjectInfo.DISCORD_LINK));
-        sender.sendMessage(CC.translate(" &f* &7Description: &c" + ProjectInfo.DESCRIPTION));
         sender.sendMessage(CC.translate(" &f* &7Github: &c" + ProjectInfo.GITHUB_LINK));
+        sender.sendMessage(CC.translate(" &f* &7Description: &c" + ProjectInfo.DESCRIPTION));
         sender.sendMessage("");
     }
 }

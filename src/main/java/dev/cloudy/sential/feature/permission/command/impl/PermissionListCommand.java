@@ -6,6 +6,8 @@ import dev.cloudy.sential.api.command.CommandArgs;
 import dev.cloudy.sential.api.command.annotation.Command;
 import dev.cloudy.sential.feature.permission.PermissionRepository;
 import dev.cloudy.sential.util.CC;
+import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 /**
@@ -25,19 +27,19 @@ public class PermissionListCommand extends BaseCommand {
             return;
         }
 
-        Player target = player.getServer().getPlayer(args[0]);
+        OfflinePlayer target = Bukkit.getOfflinePlayer(args[0]);
         if (target == null) {
             player.sendMessage(CC.translate("&cPlayer not found."));
             return;
         }
 
         PermissionRepository permissionRepository = Sential.getInstance().getPermissionRepository();
-        if (permissionRepository.getPlayerPerms(target).isEmpty()) {
+        if (permissionRepository.getPlayerPermissionList(target).isEmpty()) {
             player.sendMessage(CC.translate("&c" + target.getName() + " has no permissions."));
             return;
         }
 
         player.sendMessage(CC.translate("&c&lPermissions of &4&l" + target.getName()));
-        permissionRepository.getPlayerPerms(target).forEach(perm -> player.sendMessage(CC.translate("&c- &4" + perm)));
+        permissionRepository.getPlayerPermissionList(target).forEach(perm -> player.sendMessage(CC.translate("&c- &4" + perm)));
     }
 }

@@ -6,6 +6,8 @@ import dev.cloudy.sential.api.command.CommandArgs;
 import dev.cloudy.sential.api.command.annotation.Command;
 import dev.cloudy.sential.feature.permission.PermissionRepository;
 import dev.cloudy.sential.util.CC;
+import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 /**
@@ -25,14 +27,14 @@ public class PermissionAddCommand extends BaseCommand {
             return;
         }
 
-        Player target = player.getServer().getPlayer(args[0]);
+        OfflinePlayer target = Bukkit.getOfflinePlayer(args[0]);
         if (target == null) {
             player.sendMessage(CC.translate("&cPlayer not found."));
             return;
         }
 
         PermissionRepository permissionRepository = Sential.getInstance().getPermissionRepository();
-        if (permissionRepository.getPlayerPerms(target).contains(args[1])) {
+        if (permissionRepository.hasPermission(target.getName(), args[1])) {
             player.sendMessage(CC.translate("&c" + target.getName() + " already has that permission attached."));
             return;
         }

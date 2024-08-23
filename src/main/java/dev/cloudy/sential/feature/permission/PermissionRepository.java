@@ -1,6 +1,8 @@
 package dev.cloudy.sential.feature.permission;
 
 import dev.cloudy.sential.Sential;
+import lombok.Getter;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.PermissionAttachment;
@@ -37,14 +39,29 @@ public class PermissionRepository {
     }
 
     /**
-     * Gets the permissions of a player.
+     * Gets the list of permissions of a player.
      *
      * @param player the player to get the permissions of
-     * @return the permissions of the player
+     * @return the list of permissions
      */
-    public List<String> getPlayerPerms(Player player) {
-        Set<String> permissions = playerPermissions.get(player.getName());
+    public List<String> getPlayerPermissionList(Player player) {
+        Set<String> permissions = playerPermissions.getOrDefault(player.getName(), Collections.emptySet());
         return new ArrayList<>(permissions);
+    }
+
+    /**
+     * Gets the list of permissions of an offline player.
+     *
+     * @param player the offline player to get the permissions of
+     * @return the list of permissions
+     */
+    public List<String> getPlayerPermissionList(OfflinePlayer player) {
+        FileConfiguration config = plugin.getConfig();
+        if (!config.contains("permissions." + player.getName())) {
+            return Collections.emptyList();
+        }
+
+        return config.getStringList("permissions." + player.getName());
     }
 
     /**
@@ -98,15 +115,6 @@ public class PermissionRepository {
         for (String player : config.getConfigurationSection("permissions").getKeys(false)) {
             List<String> permissions = config.getStringList("permissions." + player);
             playerPermissions.put(player, new HashSet<>(permissions));
-        }
-
-        for (Map.Entry<String, Set<String>> entry : playerPermissions.entrySet()) {
-            Player player = plugin.getServer().getPlayer(entry.getKey());
-            if (player != null) {
-                for (String permission : entry.getValue()) {
-                    attachPermission(player, permission);
-                }
-            }
         }
     }
 

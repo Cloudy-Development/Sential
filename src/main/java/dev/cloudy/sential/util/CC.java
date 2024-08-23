@@ -37,8 +37,8 @@ public class CC {
                 " &f* &7Version: &c" + ProjectInfo.VERSION,
                 " &f* &7Author: &c" + ProjectInfo.AUTHOR,
                 " &f* &7Discord: &c" + ProjectInfo.DISCORD_LINK,
-                " &f* &7Description: &c" + ProjectInfo.DESCRIPTION,
                 " &f* &7Github: &c" + ProjectInfo.GITHUB_LINK,
+                " &f* &7Description: &c" + ProjectInfo.DESCRIPTION,
                 ""
         );
         messages.forEach(message -> Bukkit.getConsoleSender().sendMessage(translate(message)));
