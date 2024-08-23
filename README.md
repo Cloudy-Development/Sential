@@ -1,0 +1,1 @@
+# Sential - Basic Essetials plugin
