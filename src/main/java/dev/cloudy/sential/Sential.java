@@ -1,8 +1,8 @@
 package dev.cloudy.sential;
 
 import dev.cloudy.sential.api.command.CommandFramework;
-import dev.cloudy.sential.feature.chat.ChatRepository;
-import dev.cloudy.sential.feature.chat.command.ChatCommand;
+import dev.cloudy.sential.feature.chat.management.ChatRepository;
+import dev.cloudy.sential.feature.chat.management.command.ChatCommand;
 import dev.cloudy.sential.feature.chat.format.listener.ChatListener;
 import dev.cloudy.sential.player.command.SentialCommand;
 import dev.cloudy.sential.player.command.admin.AlertCommand;

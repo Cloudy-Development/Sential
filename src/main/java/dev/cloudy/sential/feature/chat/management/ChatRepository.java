@@ -1,6 +1,5 @@
-package dev.cloudy.sential.feature.chat;
+package dev.cloudy.sential.feature.chat.management;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.Getter;
 import lombok.Setter;
 

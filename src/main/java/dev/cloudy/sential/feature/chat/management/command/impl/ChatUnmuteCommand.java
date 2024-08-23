@@ -1,4 +1,4 @@
-package dev.cloudy.sential.feature.chat.command.impl;
+package dev.cloudy.sential.feature.chat.management.command.impl;
 
 import dev.cloudy.sential.Sential;
 import dev.cloudy.sential.api.command.BaseCommand;

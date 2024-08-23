@@ -1,10 +1,10 @@
-package dev.cloudy.sential.feature.chat.command;
+package dev.cloudy.sential.feature.chat.management.command;
 
 import dev.cloudy.sential.api.command.BaseCommand;
 import dev.cloudy.sential.api.command.CommandArgs;
 import dev.cloudy.sential.api.command.annotation.Command;
-import dev.cloudy.sential.feature.chat.command.impl.ChatMuteCommand;
-import dev.cloudy.sential.feature.chat.command.impl.ChatUnmuteCommand;
+import dev.cloudy.sential.feature.chat.management.command.impl.ChatMuteCommand;
+import dev.cloudy.sential.feature.chat.management.command.impl.ChatUnmuteCommand;
 import dev.cloudy.sential.util.CC;
 import org.bukkit.command.CommandSender;
 
