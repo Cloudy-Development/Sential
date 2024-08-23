@@ -1,4 +1,4 @@
-package dev.cloudy.sential.command;
+package dev.cloudy.sential.player.command.user;
 
 import dev.cloudy.sential.Sential;
 import dev.cloudy.sential.util.CC;

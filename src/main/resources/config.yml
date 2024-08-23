@@ -1,14 +1,19 @@
+
+#---------------------------------------------------------
+#                       General Settings
+#---------------------------------------------------------
 alert-format:
   - ""
   - "&7[&4Alert&7] &r{msg}"
   - ""
-
 help:
   - "&e&lHelp"
-  - "configure this in the config"
-  - "or just dont touch it, idc"
-  - "bla bla bla"
-
+  - "&7To do bla bla bla, type: &b/bla bla bla"
+  - "&7To do bla bla bla, type: &b/bla bla bla"
+  - "&7To do bla bla bla, type: &b/bla bla bla"
+#---------------------------------------------------------
+#                       Announcements
+#---------------------------------------------------------
 announcement:
   enabled: true
   send-every: 60
@@ -31,3 +36,7 @@ announcement:
       - " &fDon't forget to check our store for exclusive offers!"
       - "  &7► &bstore.yourserver.com"
       - " "
+#---------------------------------------------------------
+#                       Storage
+#---------------------------------------------------------
+permissions: {}

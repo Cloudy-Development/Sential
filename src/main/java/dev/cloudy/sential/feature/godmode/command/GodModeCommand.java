@@ -15,7 +15,7 @@ import org.bukkit.entity.Player;
  */
 public class GodModeCommand extends BaseCommand {
     @Override
-    @Command(name = "godmode", permission = "flower.command.godmode")
+    @Command(name = "godmode", permission = "sential.command.godmode")
     public void onCommand(CommandArgs command) {
         Player player = command.getPlayer();
         String [] args = command.getArgs();

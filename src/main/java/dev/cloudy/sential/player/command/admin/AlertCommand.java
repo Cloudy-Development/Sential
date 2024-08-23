@@ -1,4 +1,4 @@
-package dev.cloudy.sential.command;
+package dev.cloudy.sential.player.command.admin;
 
 import dev.cloudy.sential.Sential;
 import dev.cloudy.sential.api.command.BaseCommand;
@@ -17,7 +17,7 @@ import java.util.Arrays;
  */
 public class AlertCommand extends BaseCommand {
     @Override
-    @Command(name = "alert", permission = "flower.command.alert", inGameOnly = false)
+    @Command(name = "alert", permission = "sential.command.alert", inGameOnly = false)
     public void onCommand(CommandArgs command) {
         CommandSender sender = command.getSender();
         String[] args = command.getArgs();

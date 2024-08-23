@@ -1,4 +1,4 @@
-package dev.cloudy.sential.command;
+package dev.cloudy.sential.player.command.admin;
 
 import dev.cloudy.sential.api.command.CommandArgs;
 import dev.cloudy.sential.api.command.annotation.Command;

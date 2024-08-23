@@ -1,19 +1,24 @@
 package dev.cloudy.sential;
 
-import lombok.Getter;
 import dev.cloudy.sential.api.command.CommandFramework;
-import dev.cloudy.sential.command.AlertCommand;
-import dev.cloudy.sential.command.GamemodeCommand;
-import dev.cloudy.sential.command.HealCommand;
-import dev.cloudy.sential.command.HelpCommand;
+import dev.cloudy.sential.player.command.admin.AlertCommand;
+import dev.cloudy.sential.player.command.admin.GamemodeCommand;
+import dev.cloudy.sential.player.command.admin.HealCommand;
+import dev.cloudy.sential.player.command.user.HelpCommand;
 import dev.cloudy.sential.feature.announcement.AnnouncementTask;
 import dev.cloudy.sential.feature.godmode.GodModeRepository;
 import dev.cloudy.sential.feature.godmode.command.GodModeCommand;
 import dev.cloudy.sential.feature.godmode.listener.GodModeListener;
+import dev.cloudy.sential.feature.permission.PermissionRepository;
+import dev.cloudy.sential.feature.permission.command.PermissionCommand;
+import dev.cloudy.sential.player.listener.JoinListener;
 import dev.cloudy.sential.util.CC;
+import lombok.Getter;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Getter
 public class Sential extends JavaPlugin {
@@ -24,6 +29,7 @@ public class Sential extends JavaPlugin {
     private CommandFramework commandFramework;
     private GodModeRepository godModeRepository;
     private AnnouncementTask announcementTask;
+    private PermissionRepository permissionRepository;
 
     @Override
     public void onEnable() {
@@ -50,6 +56,8 @@ public class Sential extends JavaPlugin {
 
     private void registerRepositories() {
         godModeRepository = new GodModeRepository();
+        permissionRepository = new PermissionRepository();
+        permissionRepository.loadPermissions();
     }
 
     private void registerCommands() {
@@ -58,12 +66,17 @@ public class Sential extends JavaPlugin {
                 new GodModeCommand(),
                 new HealCommand(),
                 new AlertCommand(),
-                new HelpCommand()
+                new HelpCommand(),
+                new PermissionCommand()
         ).forEach(commandFramework::registerCommands);
     }
 
     private void registerListeners() {
-        getServer().getPluginManager().registerEvents(new GodModeListener(), this);
+        List<Listener> listeners = Arrays.asList(
+                new JoinListener(),
+                new GodModeListener()
+        );
+        listeners.forEach(listener -> getServer().getPluginManager().registerEvents(listener, this));
     }
 
     private void runTasks() {

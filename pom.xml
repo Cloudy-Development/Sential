@@ -17,7 +17,7 @@
   </properties>
 
   <build>
-      <finalName>${project.name}+${project.version}</finalName>
+      <finalName>${project.name}-${project.version}</finalName>
       <defaultGoal>clean install</defaultGoal>
     <plugins>
       <plugin>

@@ -1,4 +1,4 @@
-package dev.cloudy.sential.command;
+package dev.cloudy.sential.player.command.admin;
 
 import dev.cloudy.sential.api.command.BaseCommand;
 import dev.cloudy.sential.api.command.CommandArgs;
@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
  */
 public class CraftCommand extends BaseCommand {
     @Override
-    @Command(name = "craft", permission = "flower.command.craft")
+    @Command(name = "craft", permission = "sential.command.craft")
     public void onCommand(CommandArgs command) {
         Player player = command.getPlayer();
 

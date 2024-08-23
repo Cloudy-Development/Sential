@@ -6,12 +6,15 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * GodModeRepository handles the god-mode feature.
+ * It contains a set of players whose can be added through commands.
+ *
  * @author Emmy
  * @project Sential
  * @date 29/07/2024 - 19:42
  */
 public class GodModeRepository {
-    private Set<Player> godModePlayers = new HashSet<>();
+    private final Set<Player> godModePlayers = new HashSet<>();
 
     /**
      * Set a player to godmode
