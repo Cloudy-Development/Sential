@@ -9,7 +9,7 @@ Also, this plugin does not require any kind of databases, it all works through c
 
 ###### *Forking, modifying, and using this plugin is allowed as long as you follow the license terms.*
 
-### Discord: discord.gg/eT4B65k5E4
+### Discord: [Click Here!](https://discord.com/invite/eT4B65k5E4)
 
 ### Features
 - **Permissions**
