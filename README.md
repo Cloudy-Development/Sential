@@ -7,6 +7,8 @@ It's quite useful in Test servers for developers who want to test their plugins 
 
 Also, this plugin does not require any kind of databases, it all works through config files. It's made like that on purpose, to make things easier.
 
+###### *Forking, modifying, and using this plugin is allowed as long as you follow the license terms.*
+
 ### Features
 - **Permissions**
   - **Allows you to attach or detach permissions to players and stores them in config. (Upon server restart permissions are taken from config and applied to players when they join)**
