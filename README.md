@@ -9,6 +9,8 @@ Also, this plugin does not require any kind of databases, it all works through c
 
 ###### *Forking, modifying, and using this plugin is allowed as long as you follow the license terms.*
 
+### Discord: discord.gg/eT4B65k5E4
+
 ### Features
 - **Permissions**
   - **Allows you to attach or detach permissions to players and stores them in config. (Upon server restart permissions are taken from config and applied to players when they join)**
