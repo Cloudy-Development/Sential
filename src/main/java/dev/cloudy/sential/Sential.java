@@ -1,6 +1,7 @@
 package dev.cloudy.sential;
 
 import dev.cloudy.sential.api.command.CommandFramework;
+import dev.cloudy.sential.player.command.SentialCommand;
 import dev.cloudy.sential.player.command.admin.AlertCommand;
 import dev.cloudy.sential.player.command.admin.GamemodeCommand;
 import dev.cloudy.sential.player.command.admin.HealCommand;
@@ -62,6 +63,7 @@ public class Sential extends JavaPlugin {
 
     private void registerCommands() {
         Arrays.asList(
+                new SentialCommand(),
                 new GamemodeCommand(),
                 new GodModeCommand(),
                 new HealCommand(),

@@ -40,7 +40,7 @@ public class BukkitCommand extends org.bukkit.command.Command {
         try {
             success = executor.onCommand(sender, this, commandLabel, args);
         } catch (Throwable ex) {
-            throw new CommandException("Unhandled exception executing command '" + commandLabel + "' in plugin "
+            throw new CommandException("Unhandled exception executing command '" + commandLabel + "' in locale "
                     + owningPlugin.getDescription().getFullName(), ex);
         }
 
@@ -74,7 +74,7 @@ public class BukkitCommand extends org.bukkit.command.Command {
             for (String arg : args) {
                 message.append(arg).append(' ');
             }
-            message.deleteCharAt(message.length() - 1).append("' in plugin ")
+            message.deleteCharAt(message.length() - 1).append("' in locale ")
                     .append(owningPlugin.getDescription().getFullName());
             throw new CommandException(message.toString(), ex);
         }

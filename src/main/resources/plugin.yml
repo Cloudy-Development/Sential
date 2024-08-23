@@ -2,5 +2,4 @@ name: Sential
 version: '${project.version}'
 main: dev.cloudy.sential.Sential
 author: Emmy
-description: A plugin that adds Essential features to your server.
-website: https://discord.gg/eT4B65k5E4
+description: Adds Essential features to your server.

@@ -18,7 +18,7 @@ import java.util.*;
 public class PermissionRepository {
 
     private final Map<String, Set<String>> playerPermissions = new HashMap<>();
-    private final Sential plugin = Sential.getInstance(); // Use the plugin instance directly
+    private final Sential plugin = Sential.getInstance(); // Use the locale instance directly
 
     /**
      * Adds a permission to a player and saves it.

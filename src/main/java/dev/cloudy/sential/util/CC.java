@@ -1,7 +1,8 @@
 package dev.cloudy.sential.util;
 
-import lombok.experimental.UtilityClass;
 import dev.cloudy.sential.Sential;
+import dev.cloudy.sential.util.info.ProjectInfo;
+import lombok.experimental.UtilityClass;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 
@@ -27,29 +28,29 @@ public class CC {
     }
 
     /**
-     * Send a message to the console when the plugin is enabled
+     * Send a message to the console when the locale is enabled
      */
     public void sendEnableMessage() {
         List<String> messages = Arrays.asList(
                 "",
-                "&a&l" + Sential.getInstance().getDescription().getName(),
-                " &f* &7Version: &a" + Sential.getInstance().getDescription().getVersion(),
-                " &f* &7Author: &a" + Sential.getInstance().getDescription().getAuthors().get(0),
-                " &f* &7Discord: &a" + Sential.getInstance().getDescription().getWebsite(),
-                " &f* &7Description: &a" + Sential.getInstance().getDescription().getDescription(),
-                " &f* &7Github: &a" + "https://github.com/Cloudy-Development/Sential",
+                "&c&l" + Sential.getInstance().getDescription().getName() + " &7- &cBasic Essentials Plugin",
+                " &f* &7Version: &c" + ProjectInfo.VERSION,
+                " &f* &7Author: &c" + ProjectInfo.AUTHOR,
+                " &f* &7Discord: &c" + ProjectInfo.DISCORD_LINK,
+                " &f* &7Description: &c" + ProjectInfo.DESCRIPTION,
+                " &f* &7Github: &c" + ProjectInfo.GITHUB_LINK,
                 ""
         );
         messages.forEach(message -> Bukkit.getConsoleSender().sendMessage(translate(message)));
     }
 
     /**
-     * Send a message to the console when the plugin is disabled
+     * Send a message to the console when the locale is disabled
      */
     public void sendDisableMessage() {
         List<String> messages = Arrays.asList(
                 "",
-                "&c&l" + Sential.getInstance().getDescription().getName() + " has been disabled.",
+                "&c&l" + ProjectInfo.NAME + " has been disabled.",
                 ""
         );
         messages.forEach(message -> Bukkit.getConsoleSender().sendMessage(translate(message)));
