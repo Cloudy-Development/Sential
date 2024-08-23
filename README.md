@@ -1,1 +1,1 @@
-# Sential - Basic Essetials plugin
+# Sential - Basic Essentials plugin
