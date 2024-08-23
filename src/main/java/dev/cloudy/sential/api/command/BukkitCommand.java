@@ -1,4 +1,4 @@
-package me.emmy.sential.util.command;
+package dev.cloudy.sential.api.command;
 
 import org.apache.commons.lang.Validate;
 import org.bukkit.command.CommandException;

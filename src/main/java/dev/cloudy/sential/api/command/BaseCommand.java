@@ -1,6 +1,6 @@
-package me.emmy.sential.util.command;
+package dev.cloudy.sential.api.command;
 
-import me.emmy.sential.Sential;
+import dev.cloudy.sential.Sential;
 
 /**
  * @author minnymin3

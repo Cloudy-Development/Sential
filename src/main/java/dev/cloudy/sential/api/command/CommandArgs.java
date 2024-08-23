@@ -1,4 +1,4 @@
-package me.emmy.sential.util.command;
+package dev.cloudy.sential.api.command;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

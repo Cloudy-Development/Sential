@@ -1,4 +1,4 @@
-package me.emmy.sential.util.command.annotation;
+package dev.cloudy.sential.api.command.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

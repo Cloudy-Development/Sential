@@ -1,9 +1,9 @@
-package me.emmy.sential.command;
+package dev.cloudy.sential.command;
 
-import me.emmy.sential.util.command.BaseCommand;
-import me.emmy.sential.util.command.CommandArgs;
-import me.emmy.sential.util.command.annotation.Command;
-import me.emmy.sential.util.CC;
+import dev.cloudy.sential.api.command.BaseCommand;
+import dev.cloudy.sential.api.command.CommandArgs;
+import dev.cloudy.sential.api.command.annotation.Command;
+import dev.cloudy.sential.util.CC;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 

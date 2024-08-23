@@ -8,3 +8,26 @@ help:
   - "configure this in the config"
   - "or just dont touch it, idc"
   - "bla bla bla"
+
+announcement:
+  enabled: true
+  send-every: 60
+  list:
+    message-1:
+      - " "
+      - "&b&lAnnouncement:"
+      - " &fJoin our discord to get informed about news & updates!"
+      - "  &7► &bdiscord.gg/yourserver"
+      - " "
+    message-2:
+      - " "
+      - "&b&lAnnouncement:"
+      - " &fWatch us on YouTube to have some fun!"
+      - "  &7► &byoutube.com/yourserver"
+      - " "
+    message-3:
+      - " "
+      - "&b&lAnnouncement:"
+      - " &fDon't forget to check our store for exclusive offers!"
+      - "  &7► &bstore.yourserver.com"
+      - " "

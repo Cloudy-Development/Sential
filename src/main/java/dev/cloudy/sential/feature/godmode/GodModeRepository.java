@@ -1,7 +1,5 @@
-package me.emmy.sential.godmode;
+package dev.cloudy.sential.feature.godmode;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.bukkit.entity.Player;
 
 import java.util.HashSet;
@@ -12,8 +10,6 @@ import java.util.Set;
  * @project Sential
  * @date 29/07/2024 - 19:42
  */
-@Getter
-@Setter
 public class GodModeRepository {
     private Set<Player> godModePlayers = new HashSet<>();
 

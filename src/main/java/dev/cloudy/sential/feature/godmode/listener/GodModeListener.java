@@ -1,7 +1,7 @@
-package me.emmy.sential.godmode.listener;
+package dev.cloudy.sential.feature.godmode.listener;
 
-import me.emmy.sential.Sential;
-import me.emmy.sential.godmode.GodModeRepository;
+import dev.cloudy.sential.Sential;
+import dev.cloudy.sential.feature.godmode.GodModeRepository;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

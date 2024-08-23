@@ -1,9 +1,9 @@
-package me.emmy.sential.util.command;
+package dev.cloudy.sential.api.command;
 
-import me.emmy.sential.Sential;
-import me.emmy.sential.util.CC;
-import me.emmy.sential.util.command.annotation.Command;
-import me.emmy.sential.util.command.annotation.Completer;
+import dev.cloudy.sential.Sential;
+import dev.cloudy.sential.util.CC;
+import dev.cloudy.sential.api.command.annotation.Command;
+import dev.cloudy.sential.api.command.annotation.Completer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandExecutor;

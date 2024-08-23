@@ -1,11 +1,11 @@
-package me.emmy.sential.godmode.command;
+package dev.cloudy.sential.feature.godmode.command;
 
-import me.emmy.sential.Sential;
-import me.emmy.sential.util.command.BaseCommand;
-import me.emmy.sential.util.command.CommandArgs;
-import me.emmy.sential.util.command.annotation.Command;
-import me.emmy.sential.godmode.GodModeRepository;
-import me.emmy.sential.util.CC;
+import dev.cloudy.sential.Sential;
+import dev.cloudy.sential.api.command.BaseCommand;
+import dev.cloudy.sential.api.command.CommandArgs;
+import dev.cloudy.sential.api.command.annotation.Command;
+import dev.cloudy.sential.feature.godmode.GodModeRepository;
+import dev.cloudy.sential.util.CC;
 import org.bukkit.entity.Player;
 
 /**
