@@ -14,9 +14,9 @@ alert-format:
 #help command format
 help:
   - "&e&lHelp"
-  - "&7To do bla bla bla, type: &b/bla bla bla"
-  - "&7To do bla bla bla, type: &b/bla bla bla"
-  - "&7To do bla bla bla, type: &b/bla bla bla"
+  - " &fTo do bla bla bla, type: &c/bla bla bla"
+  - " &fTo do bla bla bla, type: &c/bla bla bla"
+  - " &fTo do bla bla bla, type: &c/bla bla bla"
 #---------------------------------------------------------
 #                       Announcements
 #---------------------------------------------------------

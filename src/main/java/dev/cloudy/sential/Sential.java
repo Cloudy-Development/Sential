@@ -17,12 +17,13 @@ import dev.cloudy.sential.feature.permission.PermissionRepository;
 import dev.cloudy.sential.feature.permission.command.PermissionCommand;
 import dev.cloudy.sential.player.listener.JoinListener;
 import dev.cloudy.sential.util.CC;
-import lombok.Getter;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Arrays;
 import java.util.List;
+
+import lombok.Getter;
 
 @Getter
 public class Sential extends JavaPlugin {
